@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Employee Dashboard</title>
+</head>
+<body>
+    <h2>Employee Dashboard</h2>
+    <div class="search">
+        <select id="filter-type">
+            <option value="">Filter By</option>
+            <option value="name">Name</option>
+            <option value="designation">Designation</option>
+        </select>
+        <input type="text" id="filter-input" placeholder="Search Here">
+    </div>
+    <button id="add-button">ADD</button>
+    <div class="modal" id="modal">
+        <form id="employee-form">
+            <input type="hidden" id="employee-id">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+            <label for="age">Age</label>
+            <input type="number" min="1" step="1" id="age" required>
+            <label for="designation">Designation</label>
+            <input type="text" id="designation" required>
+            <button type="submit">Submit</button>
+            <button type="submit" class="close-btn" id="close-modal">Close</button>
+        </form>
+    </div>
+    
+    <div id="error-message"></div>    
+    <div id="employee-list"></div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
