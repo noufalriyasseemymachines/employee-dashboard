@@ -17,7 +17,10 @@
         </select>
         <input type="text" id="filter-input" placeholder="Search Here">
     </div>
+    <button id="logout-button">LOGOUT</button>
     <button id="add-button">ADD</button>
+    
+
     <div class="modal" id="modal">
         <form id="employee-form">
             <input type="hidden" id="employee-id">
@@ -27,14 +30,19 @@
             <input type="number" min="1" step="1" id="age" required>
             <label for="designation">Designation</label>
             <input type="text" id="designation" required>
-            <button type="submit">Submit</button>
-            <button type="submit" class="close-btn" id="close-modal">Close</button>
+            <button type="submit" id="submit-btn">Submit</button>
+            <button type="button" class="close-btn" id="close-modal">Close</button>
         </form>
     </div>
-    
-    <div id="error-message"></div>    
+    <div id="confirmation-modal" class="confirmation-modal">
+        <div class="modal-content">
+          <p>Are you sure you want to delete?</p>
+          <button id="confirm-yes">Yes</button>
+          <button id="confirm-no">No</button>
+        </div>
+    </div>
+    <div id="snackbar"></div>   
     <div id="employee-list"></div>
-
 
     <script src="index.js"></script>
 </body>
